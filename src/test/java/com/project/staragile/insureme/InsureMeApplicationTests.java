@@ -34,11 +34,11 @@ class InsureMeApplicationTests {
 	void testViewPolicy() {
 		Policy policy = new Policy(1, "Vikul", "Individual" , 10000, "10-Sep-2021", "10-Sep-2022");
 		PolicyService pService = new PolicyService();
-		pService.CreatePolicy();
+		//pService.CreatePolicy();
 		//Policy outputPolicy = pService.CreatePolicy();
-		pService.policyRepository = policyRepository;
-		System.out.println("policy - "+ policy.getPolicyId());
-		System.out.println("222 - "+ pService.getPolicyDetails(policy.getPolicyId()));
+		//pService.policyRepository = policyRepository;
+		//System.out.println("policy - "+ policy.getPolicyId());
+		//System.out.println("222 - "+ pService.getPolicyDetails(policy.getPolicyId()));
 		assertEquals(policy.getPolicyId(), pService.getPolicyDetails(policy.getPolicyId()));
 		
 	}
@@ -46,8 +46,8 @@ class InsureMeApplicationTests {
 	@Test
 	void testDeletePolicy() {
 		Policy policy = new Policy(1, "Vikul", "Individual" , 10000, "10-Sep-2021", "10-Sep-2022");
-		PolicyService pService = new PolicyService();
-		pService.policyRepository = policyRepository;
+		//PolicyService pService = new PolicyService();
+		//pService.policyRepository = policyRepository;
 		//Policy outputPolicy = pService.CreatePolicy();
 		assertEquals(policy.getPolicyId(), pService.deletePolicy(policy.getPolicyId()));
 		
